@@ -8,6 +8,7 @@
 import type { Metadata } from 'next'
 import type React from 'react'
 import './globals.css'
+import { Providers } from '@/components/providers'
 
 export const metadata: Metadata = {
   title: 'Pathlab - Laboratory Management System',
@@ -46,8 +47,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="antialiased">
-        {/* Theme provider and global providers will be added in Phase 2 */}
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )
